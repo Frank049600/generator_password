@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contraseña segura</title>
+    </head>
+    <link rel="stylesheet" href="css/style.css">
+
+    <body>
+        <div id="contenedor">
+            <div>
+                <h1>Genera contraseña</h1>
+                <form id="formulario" action="http://127.0.0.1:5000/pwd" method="POST">
+                    <label for="cantidad">Número de contraseñas:</label><br>
+                    <input type="number" id="cantidad" name="cantidad" required><br><br>
+                    <label for="pwd_length">Tamaño de la contraseña:</label><br>
+                    <input type="number" id="pwd_length" name="pwd_length" required><br><br>
+                    <label for="use_num">Uso de numeros:</label><br>
+                    <div>
+                        <input type="radio" id="use_num_si" name="use_num" value="si" checked />
+                        <label for="use_num_si">Si</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="use_num_no" name="use_num" value="no" />
+                        <label for="use_num_no">No</label>
+                    </div><br>
+                    <label for="use_caracterE">Uso de caracteres especiales:</label><br>
+                    <div>
+                        <input type="radio" id="use_caracterE_si" name="use_caracterE" value="si" checked />
+                        <label for="use_caracterE_si">Si</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="use_caracterE_no" name="use_caracterE" value="no" />
+                        <label for="use_caracterE_no">No</label>
+                    </div><br><br>
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+            <div id="passwords"></div>
+        </div>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
+</html>
