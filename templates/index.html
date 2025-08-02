@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Contraseña segura</title>
+    </head>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css"
+    integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <body>
+        <div id="error">
+            <div id="msg"></div>
+        </div>
+        <div id="contenedor">
+            <div>
+                <h1>Generar contraseña</h1>
+                <form id="formulario">
+                    <label for="cantidad">Número de contraseñas:</label><br>
+                    <input type="number" id="cantidad" name="cantidad" required><br><br>
+                    <label for="pwd_length">Tamaño de la contraseña:</label><br>
+                    <input type="number" id="pwd_length" name="pwd_length" required><br><br>
+                    <div id="radios">
+                        <div id="number">
+                            <label for="use_num">Uso de numeros:</label><br>
+                            <div>
+                                <input type="radio" id="use_num_si" name="use_num" value="si" checked />
+                                <label for="use_num_si">Si</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="use_num_no" name="use_num" value="no" />
+                                <label for="use_num_no">No</label>
+                            </div><br>
+                        </div>
+                        <div id="especial">
+                            <label for="use_caracterE">Uso de caracteres especiales:</label><br>
+                            <div>
+                                <input type="radio" id="use_caracterE_si" name="use_caracterE" value="si" checked />
+                                <label for="use_caracterE_si">Si</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="use_caracterE_no" name="use_caracterE" value="no" />
+                                <label for="use_caracterE_no">No</label>
+                            </div><br><br>
+                        </div>
+                    </div>
+                    <div id="btns">
+                        <input type="submit" class="button" value="Generar">
+                        <input type="button" class="button" id="restart" value="Restablecer">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="resultado">
+            <div id="alojados"></div>
+        </div>
+    </body>
+    <script src="{{ url_for('static', filename='lib/jQuery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</html>
