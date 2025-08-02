@@ -28,7 +28,7 @@ $(document).ready(function () {
         }
         var params = JSON.stringify(datos);
 
-        fetch('http://127.0.0.1:5000/pwd', {
+        fetch('https://generator-pasword.onrender.com/pwd', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
