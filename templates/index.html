@@ -8,8 +8,9 @@
         <title>Contraseña segura</title>
     </head>
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css"
-    integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css"
+        integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
     <body>
@@ -20,13 +21,13 @@
             <div>
                 <h1>Generar contraseña</h1>
                 <form id="formulario">
-                    <label for="cantidad">Número de contraseñas:</label><br>
+                    <label for="cantidad">¿Cuántas contraseñas necesitas?</label><br>
                     <input type="number" id="cantidad" name="cantidad" required><br><br>
-                    <label for="pwd_length">Tamaño de la contraseña:</label><br>
+                    <label for="pwd_length">¿Qué tamaño debe tener la(s) contraseña(s)?</label><br>
                     <input type="number" id="pwd_length" name="pwd_length" required><br><br>
                     <div id="radios">
                         <div id="number">
-                            <label for="use_num">Uso de numeros:</label><br>
+                            <label for="use_num">¿Debe incluir numeros?</label><br>
                             <div>
                                 <input type="radio" id="use_num_si" name="use_num" value="si" checked />
                                 <label for="use_num_si">Si</label>
@@ -37,7 +38,7 @@
                             </div><br>
                         </div>
                         <div id="especial">
-                            <label for="use_caracterE">Uso de caracteres especiales:</label><br>
+                            <label for="use_caracterE">¿Debe incluir caracteres especiales?</label><br>
                             <div>
                                 <input type="radio" id="use_caracterE_si" name="use_caracterE" value="si" checked />
                                 <label for="use_caracterE_si">Si</label>
