@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify, render_template
-import secrets, string
+import secrets, string, os
 from flask_cors import CORS
 
 
@@ -12,6 +12,8 @@ users = [
     {"id": 2, "name": "Bob", "email": "bob@example.com"}
 ]
 next_id = 3 # Para asignar IDs a nuevos usuarios
+
+name_server = os.environ.get('server_name', 'default_value')
 
 # Function to validate the password
 def password_check(passwd, pwd_length, use_num, use_caracterE):
@@ -44,7 +46,7 @@ def password_check(passwd, pwd_length, use_num, use_caracterE):
 # Renderiza la página principal
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('index.html', name_server=name_server)
 
 # Ruta para generar contraseñas seguras
 @app.route('/pwd', methods=['POST'])

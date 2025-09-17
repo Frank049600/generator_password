@@ -28,7 +28,10 @@ $(document).ready(function () {
         }
         var params = JSON.stringify(datos);
 
-        fetch('https://generator-pasword.onrender.com/pwd', {
+        // Accede directamente a la variable de entorno
+        const nameServer = "{{ name_server }}";
+
+        fetch('http://' + nameServer + '/pwd', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

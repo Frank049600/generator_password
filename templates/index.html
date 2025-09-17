@@ -62,5 +62,9 @@
     </body>
     <script src="{{ url_for('static', filename='lib/jQuery.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script>
+        // Accede a la variable de Flask
+        const nameServer = "{{ name_server }}";
+    </script>
 
 </html>
